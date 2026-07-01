@@ -1,0 +1,52 @@
+participant_name: "Polo"
+participant_id:   "participant_redrob"
+
+contact:
+  name:  "Polo"
+  email: "polo@example.com"
+  phone: "+91-9999999999"
+
+github_repo:    "https://github.com/Polo/redrob-candidate-ranking"
+sandbox_link:   "https://huggingface.co/spaces/Polo/redrob-ranker"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --participant-id participant_redrob"
+
+compute:
+  platform: "Local Windows Box"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.13.1"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "GitHub Copilot"
+  - "Antigravity IDE"
+
+ai_usage_summary: |
+  Used Antigravity IDE for autocomplete. All scoring logic, weights, and engineering
+  decisions are original work. No candidate data sent to any external API.
+  Ranker runs fully offline with no network dependency.
+
+methodology_summary: |
+  Five-component hybrid scoring system designed around signals the JD explicitly names.
+  skill_match (30%): expanded term-group matching across career descriptions — reads
+  career_history text not just skills[], catching semantic equivalents like
+  'recommendation system' for embedding-based retrieval. career_quality (25%): computes
+  product_ratio because JD explicitly disqualifies pure IT-services careers.
+  role_fit (20%): encodes title fit, location (Pune/Noida preferred), notice period,
+  and work mode. engagement_signals (15%): all 23 redrob_signals fields as a
+  behavioural availability modifier. education (10%): institution tier and STEM field.
+  Availability multiplier penalises candidates inactive 365+ days with low response
+  rate. Honeypot detection uses 5 heuristic flags — any 2+ triggers 0.80 penalty.
+  Runtime: ~55 seconds for 100,000 candidates on standard CPU. No embeddings,
+  no external APIs, fully reproducible offline.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
