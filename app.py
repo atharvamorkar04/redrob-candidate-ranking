@@ -79,7 +79,10 @@ st.markdown("""
         border-right: 1px solid #1E1014;
     }
     [data-testid="stSidebarUserContent"] {
-        padding: 20px 14px !important;
+        padding-top: 0px !important;
+        padding-bottom: 20px !important;
+        padding-left: 14px !important;
+        padding-right: 14px !important;
     }
     [data-testid="stSidebar"] [data-testid="element-container"] {
         margin-bottom: 8px !important;
