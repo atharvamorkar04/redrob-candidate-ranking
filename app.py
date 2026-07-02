@@ -64,6 +64,12 @@ st.markdown("""
         background-color: #020203;
         border-right: 1px solid #1E1014;
     }
+    [data-testid="stSidebarUserContent"] {
+        padding: 20px 14px !important;
+    }
+    [data-testid="stSidebar"] [data-testid="element-container"] {
+        margin-bottom: 8px !important;
+    }
 
     /* Hide default menu and footer but keep the header collapse toggle button visible */
     #MainMenu {visibility: hidden;}
@@ -261,11 +267,13 @@ st.markdown("""
 
 # 3. SIDEBAR
 st.sidebar.markdown("""
-<div style='display: flex; align-items: center; margin-bottom: 12px;'>
-    <span class='pulse-dot'></span>
-    <span style='font-size: 22px; font-weight: 700; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; letter-spacing: -0.5px;'>REDROB <span style='color: #E11D48;'>RANK</span></span>
+<div style='padding: 8px 16px 8px 16px; margin-bottom: 0px;'>
+    <div style='display: flex; align-items: center; margin-bottom: 2px;'>
+        <span class='pulse-dot'></span>
+        <span style='font-size: 22px; font-weight: 700; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; letter-spacing: -0.5px;'>REDROB <span style='color: #E11D48;'>RANK</span></span>
+    </div>
+    <div style='font-size: 12px; color: #71717A; font-family: "Plus Jakarta Sans", sans-serif;'>AI Candidate Discovery Core</div>
 </div>
-<div style='font-size: 12px; color: #71717A; margin-top: -5px; margin-bottom: 25px; font-family: "Plus Jakarta Sans", sans-serif;'>AI Candidate Discovery Core</div>
 """, unsafe_allow_html=True)
 
 uploaded_file = st.sidebar.file_uploader(
