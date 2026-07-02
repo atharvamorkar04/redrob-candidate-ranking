@@ -386,20 +386,55 @@ if uploaded_file is not None:
             finally:
                 os.remove(tmp_path)
 else:
-    # Check if we have pre-computed results in the local workspace or can fall back
-    default_candidates_path = r"[PUB] India_runs_data_and_ai_challenge\India_runs_data_and_ai_challenge\candidates.jsonl"
-    from rank import find_candidates_file
-    try:
-        candidates_file_to_use = find_candidates_file(default_candidates_path)
-    except SystemExit:
-        candidates_file_to_use = None
+    # Fallback chain: try full local dataset first, then candidates.jsonl.gz, then search, then sample
+    candidates_file_to_use = None
+    
+    # 1. Try the uncompressed local dataset path
+    default_candidates_path = os.path.join(os.path.dirname(__file__),
+        "[PUB] India_runs_data_and_ai_challenge", "India_runs_data_and_ai_challenge", "candidates.jsonl")
+    
+    # 2. Compressed root candidates path
+    default_gz_path = os.path.join(os.path.dirname(__file__), "candidates.jsonl.gz")
+    
+    if os.path.exists(default_candidates_path):
+        candidates_file_to_use = default_candidates_path
+    elif os.path.exists(default_gz_path):
+        candidates_file_to_use = default_gz_path
+    else:
+        # 3. Try find_candidates_file search (scans parent dirs)
+        from rank import find_candidates_file
+        try:
+            candidates_file_to_use = find_candidates_file(default_candidates_path)
+        except SystemExit:
+            candidates_file_to_use = None
+    
+    # 4. Final fallback: bundled sample_candidates.json (50 candidates)
+    if not candidates_file_to_use:
+        sample_path = os.path.join(os.path.dirname(__file__), "sample_candidates.json")
+        if os.path.exists(sample_path):
+            candidates_file_to_use = sample_path
 
     if candidates_file_to_use and run_pressed:
-        with st.spinner("Running ranking on local workspace dataset..."):
+        is_sample = candidates_file_to_use.endswith("sample_candidates.json")
+        is_gz = candidates_file_to_use.endswith("candidates.jsonl.gz")
+        
+        if is_sample:
+            spinner_msg = "Running ranking on sample dataset (50 candidates)..."
+        elif is_gz:
+            spinner_msg = "Running ranking on full compressed dataset (100,000 candidates)..."
+        else:
+            spinner_msg = "Running ranking on local workspace dataset..."
+            
+        with st.spinner(spinner_msg):
             results, metrics = process_data(candidates_file_to_use)
             st.session_state['results'] = results
             st.session_state['metrics'] = metrics
-            st.sidebar.success("Local Ranking Completed!")
+            if is_sample:
+                st.sidebar.success("Sample Ranking Completed! (50 candidates)")
+            elif is_gz:
+                st.sidebar.success("Full Ranking Completed! (100k candidates)")
+            else:
+                st.sidebar.success("Local Ranking Completed!")
 
 # Retrieve session results
 if 'results' in st.session_state:
