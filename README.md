@@ -74,7 +74,7 @@ pytest
 
 ## 🖥️ Interactive Dashboard UI
 
-The system features a stunning **Pure Black, Gold & White OpenAI/Anthropic style UI** built with Streamlit.
+The system features a stunning **Pure Black, Gold & White style UI** built with Streamlit.
 
 To launch the dashboard locally:
 ```bash

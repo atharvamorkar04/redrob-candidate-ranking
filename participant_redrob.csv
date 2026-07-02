@@ -1,0 +1,101 @@
+candidate_id,rank,score,reasoning
+CAND_0018499,1,0.9261,"7.2yr Senior Machine Learning Engineer at Zomato — hits all 4 JD must-haves. Open-to-work, 15d notice."
+CAND_0086022,2,0.9081,"5.3yr Senior Applied Scientist at Sarvam AI — hits all 4 JD must-haves. Open-to-work, 0d notice."
+CAND_0046064,3,0.9066,"8.9yr Senior NLP Engineer at Salesforce — hits all 4 JD must-haves. Open-to-work, 30d notice."
+CAND_0079387,4,0.9021,"6.9yr AI Engineer at Microsoft — hits all 4 JD must-haves. Open-to-work, 30d notice."
+CAND_0028793,5,0.8916,7.2yr Search Engineer at Google — hits all 4 JD must-haves. Open-to-work.
+CAND_0005260,6,0.8911,5.2yr Senior NLP Engineer (hits all 4 JD must-haves). Not marked open-to-work.
+CAND_0027691,7,0.8886,6.5yr NLP Engineer (hits all 4 JD must-haves).
+CAND_0081846,8,0.8841,6.7yr Lead AI Engineer (hits all 4 JD must-haves).
+CAND_0004402,9,0.8836,6.0yr AI Research Engineer (hits all 4 JD must-haves).
+CAND_0018094,10,0.8806,5.2yr ML Engineer (hits all 4 JD must-haves).
+CAND_0020877,11,0.8791,5.1yr Applied ML Engineer (hits all 4 JD must-haves). Not marked open-to-work.
+CAND_0005649,12,0.8766,7.4yr Senior Data Scientist (hits all 4 JD must-haves). Notice: 90d.
+CAND_0065195,13,0.8761,5.1yr Search Engineer (hits all 4 JD must-haves).
+CAND_0091909,14,0.8761,6.9yr Machine Learning Engineer (hits all 4 JD must-haves).
+CAND_0058688,15,0.8736,6.7yr AI Engineer (hits all 4 JD must-haves).
+CAND_0070398,16,0.8736,7.2yr Machine Learning Engineer (hits all 4 JD must-haves). Notice 120d is long.
+CAND_0046525,17,0.8731,6.1yr Senior Machine Learning Engineer (hits all 4 JD must-haves).
+CAND_0042100,18,0.8706,7.3yr Machine Learning Engineer (hits all 4 JD must-haves). Notice: 90d.
+CAND_0030953,19,0.8701,7.8yr Search Engineer (hits all 4 JD must-haves). Not marked open-to-work.
+CAND_0077337,20,0.8686,7.0yr Staff Machine Learning Engineer (hits all 4 JD must-haves).
+CAND_0039754,21,0.8672,16.2yr Senior Applied Scientist — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0060315,22,0.8646,5.4yr Senior Software Engineer (ML) — hits all 4 JD must-haves. 4/4 must-haves matched. Notice: 90d.
+CAND_0037980,23,0.8631,9.0yr Senior Applied Scientist — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0080766,24,0.8631,8.8yr Staff Machine Learning Engineer — hits all 4 JD must-haves. 4/4 must-haves matched. Not marked open-to-work.
+CAND_0006418,25,0.8626,5.7yr Machine Learning Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0088025,26,0.8606,8.6yr Staff Machine Learning Engineer — hits all 4 JD must-haves. 4/4 must-haves matched. Notice: 90d.
+CAND_0017960,27,0.8586,7.7yr Recommendation Systems Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0030031,28,0.8586,5.7yr AI Engineer — hits all 4 JD must-haves. 4/4 must-haves matched. Not marked open-to-work.
+CAND_0042506,29,0.8575,4.2yr Search Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0063736,30,0.8575,3.7yr Data Scientist — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0055905,31,0.8541,8.1yr Senior Machine Learning Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0083307,32,0.8541,7.8yr Search Engineer — hits all 4 JD must-haves. 4/4 must-haves matched. Notice 120d is long.
+CAND_0095619,33,0.8537,15.6yr NLP Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0024620,34,0.8536,5.9yr AI Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0037566,35,0.8511,6.9yr Machine Learning Engineer — hits 3/4 JD must-haves. 3/4 must-haves matched.
+CAND_0074735,36,0.8511,5.5yr Applied ML Engineer — hits all 4 JD must-haves. 4/4 must-haves matched. Notice: 90d.
+CAND_0007412,37,0.8496,7.4yr Applied ML Engineer — hits 3/4 JD must-haves. 3/4 must-haves matched. Notice 120d is long.
+CAND_0042029,38,0.8491,6.5yr Senior Data Scientist — hits all 4 JD must-haves. 4/4 must-haves matched. Not marked open-to-work.
+CAND_0098846,39,0.8491,7.6yr AI Engineer — hits 3/4 JD must-haves. 3/4 must-haves matched.
+CAND_0043860,40,0.8486,6.1yr Junior ML Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0027801,41,0.8481,7.4yr NLP Engineer — hits all 4 JD must-haves. 4/4 must-haves matched. Notice 120d is long.
+CAND_0017093,42,0.8466,5.9yr ML Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0033445,43,0.8466,6.8yr ML Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0071974,44,0.8461,7.8yr Senior AI Engineer — hits 3/4 JD must-haves. 3/4 must-haves matched.
+CAND_0092255,45,0.8449,5.2yr ML Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0052328,46,0.8441,6.5yr Recommendation Systems Engineer — hits all 4 JD must-haves. 4/4 must-haves matched.
+CAND_0008425,47,0.8436,7.8yr Senior NLP Engineer — hits all 4 JD must-haves. 4/4 must-haves matched. Notice: 90d.
+CAND_0096142,48,0.8436,5.0yr Applied ML Engineer — hits 3/4 JD must-haves. 3/4 must-haves matched. Notice 120d is long.
+CAND_0009837,49,0.8435,4.3yr Senior Data Scientist — hits all 4 JD must-haves. 4/4 must-haves matched. Not marked open-to-work.
+CAND_0010149,50,0.8424,6.9yr ML Engineer — hits all 4 JD must-haves. 4/4 must-haves matched. Notice: 90d.
+CAND_0052335,51,0.8421,6.4yr Applied ML Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0068351,52,0.8421,6.4yr Lead AI Engineer — peripheral fit. 4/4 JD must-haves. Not marked open-to-work.
+CAND_0052682,53,0.8406,6.6yr NLP Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0051466,54,0.8401,5.3yr AI Research Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0064326,55,0.8401,7.6yr Search Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0081053,56,0.8376,5.4yr NLP Engineer — peripheral fit. 4/4 JD must-haves. Notice: 90d.
+CAND_0093193,57,0.8375,7.9yr Senior Machine Learning Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0024147,58,0.8356,5.9yr ML Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0069905,59,0.8351,6.6yr Applied ML Engineer — peripheral fit. 4/4 JD must-haves. Notice: 90d.
+CAND_0011687,60,0.8346,7.8yr Senior NLP Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0050454,61,0.8331,6.8yr AI Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0030468,62,0.8326,5.4yr Senior Applied Scientist — peripheral fit. 4/4 JD must-haves.
+CAND_0005538,63,0.8291,5.9yr Senior AI Engineer — peripheral fit. 4/4 JD must-haves. Notice: 90d.
+CAND_0007009,64,0.8291,7.9yr Recommendation Systems Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0051004,65,0.8290,4.7yr Senior Data Scientist — peripheral fit. 3/4 JD must-haves.
+CAND_0078002,66,0.8281,6.3yr Machine Learning Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0018888,67,0.8276,6.5yr AI Research Engineer — peripheral fit. 4/4 JD must-haves. Not marked open-to-work.
+CAND_0033861,68,0.8271,8.0yr Senior NLP Engineer — peripheral fit. 4/4 JD must-haves. Not marked open-to-work.
+CAND_0061257,69,0.8271,8.0yr Staff Machine Learning Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0094759,70,0.8271,8.6yr Lead AI Engineer — peripheral fit. 4/4 JD must-haves. Not marked open-to-work.
+CAND_0084819,71,0.8250,4.5yr Search Engineer — peripheral fit. 4/4 JD must-haves. Notice 120d is long.
+CAND_0016659,72,0.8240,4.4yr ML Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0028422,73,0.8231,5.5yr Junior ML Engineer — peripheral fit. 4/4 JD must-haves. Notice: 90d.
+CAND_0054318,74,0.8230,3.5yr AI Research Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0002025,75,0.8226,5.9yr Senior AI Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0072660,76,0.8226,7.1yr Machine Learning Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0067643,77,0.8221,6.0yr AI Research Engineer — peripheral fit. 4/4 JD must-haves. Not marked open-to-work.
+CAND_0075574,78,0.8191,5.7yr Machine Learning Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0062247,79,0.8181,7.3yr AI Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0013456,80,0.8180,4.7yr Data Scientist — peripheral fit. 4/4 JD must-haves.
+CAND_0091899,81,0.8176,5.8yr Senior Software Engineer (ML) — peripheral fit. 4/4 JD must-haves. Not marked open-to-work.
+CAND_0049538,82,0.8166,5.8yr Applied ML Engineer — peripheral fit. 4/4 JD must-haves. Not marked open-to-work.
+CAND_0043637,83,0.8161,5.5yr Junior ML Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0011125,84,0.8151,6.6yr Junior ML Engineer — peripheral fit. 4/4 JD must-haves. Notice 120d is long.
+CAND_0033987,85,0.8146,6.8yr ML Engineer — peripheral fit. 4/4 JD must-haves. Notice: 90d.
+CAND_0079284,86,0.8140,4.9yr Machine Learning Engineer — peripheral fit. 3/4 JD must-haves. Not marked open-to-work.
+CAND_0023215,87,0.8135,4.4yr Junior ML Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0080472,88,0.8125,4.4yr Junior ML Engineer — peripheral fit. 4/4 JD must-haves. Notice 120d is long.
+CAND_0032216,89,0.8121,6.1yr ML Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0089947,90,0.8121,5.4yr Junior ML Engineer — peripheral fit. 4/4 JD must-haves. Notice: 90d.
+CAND_0010685,91,0.8116,6.7yr NLP Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0067041,92,0.8095,6.9yr Data Scientist — peripheral fit. 4/4 JD must-haves. Notice 120d is long.
+CAND_0041669,93,0.8091,8.0yr Recommendation Systems Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0068811,94,0.8091,8.0yr Applied ML Engineer — peripheral fit. 3/4 JD must-haves.
+CAND_0070202,95,0.8091,5.1yr Machine Learning Engineer — peripheral fit. 4/4 JD must-haves. Notice: 90d.
+CAND_0062561,96,0.8081,5.9yr ML Engineer — peripheral fit. 4/4 JD must-haves. [#96]
+CAND_0020708,97,0.8080,4.2yr Search Engineer — peripheral fit. 4/4 JD must-haves.
+CAND_0037944,98,0.8080,4.9yr Senior Data Scientist — peripheral fit. 3/4 JD must-haves.
+CAND_0065878,99,0.8076,7.8yr Senior Data Scientist — peripheral fit. 3/4 JD must-haves.
+CAND_0061339,100,0.8070,4.2yr Search Engineer — peripheral fit. 4/4 JD must-haves. Notice: 90d.
