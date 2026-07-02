@@ -1,14 +1,14 @@
-participant_name: "Polo"
-participant_id:   "participant_redrob"
+participant_name: "Atharva Morkar"
+participant_id: "atharvamorkar04_3026"
 
 contact:
-  name:  "Polo"
-  email: "polo@example.com"
-  phone: "+91-9999999999"
+  name: "Atharva Morkar"
+  email: "atharvamorkar04@gmail.com"
+  phone: "+91-7821988638"
 
-github_repo:    "https://github.com/Polo/redrob-candidate-ranking"
-sandbox_link:   "https://huggingface.co/spaces/Polo/redrob-ranker"
-reproduce_command: "python rank.py --candidates ./candidates.jsonl --participant-id participant_redrob"
+github_repo: "https://github.com/atharvamorkar04/redrob-candidate-ranking"
+sandbox_link: "https://huggingface.co/spaces/Polo/redrob-ranker"
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --participant-id atharvamorkar04_3026"
 
 compute:
   platform: "Local Windows Box"
