@@ -52,6 +52,11 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
+    /* Hide top-right header toolbar */
+    header[data-testid="stHeader"] {
+        display: none !important;
+    }
+
     /* Main layout background and fonts */
     .stApp {
         background-color: #000000;
