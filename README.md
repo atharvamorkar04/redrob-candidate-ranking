@@ -65,7 +65,7 @@ graph TD
 
 ## 🔢 Scoring Heuristics & Weights
 
-$$final\_score = \text{clip}\left((\text{raw\_score} - \text{disqualification\_penalty} - \text{honeypot\_penalty}) \times \text{availability\_multiplier}, 0.0, 1.0\right)$$
+$$FinalScore = \text{clip}\left((RawScore - DisqualificationPenalty - HoneypotPenalty) \times AvailabilityMultiplier, 0.0, 1.0\right)$$
 
 ### 📊 Weight Distribution:
 | Component | Weight | Target Attributes |
