@@ -11,6 +11,7 @@ __pycache__/
 # Local CSV outputs
 *.csv
 !participant_redrob.csv
+!atharvamorkar04_3026.csv
 
 # Virtual environments
 .venv/
