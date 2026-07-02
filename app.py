@@ -52,9 +52,14 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-    /* Hide top-right deploy/share/menu but keep collapse toggle */
-    .stAppDeployButton,
-    [data-testid="stAppDeployButton"] {
+    /* Hide all top-right header buttons (Share, Star, Edit, GitHub) but keep collapse toggle */
+    header[data-testid="stHeader"] > div > div:nth-child(2),
+    header[data-testid="stHeader"] > div:first-child > div:nth-child(2),
+    header[data-testid="stHeader"] [data-testid="stHeaderDecoration"],
+    header[data-testid="stHeader"] .stAppDeployButton,
+    header[data-testid="stHeader"] [data-testid="stAppDeployButton"],
+    header[data-testid="stHeader"] button[kind="headerDecoration"],
+    header[data-testid="stHeader"] a {
         display: none !important;
     }
 
@@ -133,7 +138,27 @@ st.markdown("""
         padding: 20px 24px !important;
     }
     [data-testid="stSidebar"] [data-testid="element-container"] {
-        margin-bottom: 8px !important;
+        margin-bottom: 12px !important;
+    }
+    /* Increase font sizes and spacing inside sidebar */
+    [data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+        font-size: 15.5px !important;
+        font-weight: 600 !important;
+        color: #E4E4E7 !important;
+    }
+    [data-testid="stSidebar"] button[kind="primary"] {
+        font-size: 15.5px !important;
+        padding: 12px 24px !important;
+    }
+    [data-testid="stSidebar"] div[data-testid="stMetricLabel"] {
+        font-size: 15px !important;
+    }
+    [data-testid="stSidebar"] div[data-testid="stMetricValue"] {
+        font-size: 26px !important;
+    }
+    [data-testid="stSidebar"] [data-testid="stFileUploader"] span,
+    [data-testid="stSidebar"] [data-testid="stFileUploader"] small {
+        font-size: 13.5px !important;
     }
 
     /* Hide default menu and footer but keep the header collapse toggle button visible */
@@ -349,12 +374,12 @@ st.markdown("""
 
 # 3. SIDEBAR
 st.sidebar.markdown("""
-<div style='padding: 8px 16px 8px 16px; margin-bottom: 0px;'>
-    <div style='display: flex; align-items: center; margin-bottom: 2px;'>
+<div style='padding: 8px 16px 12px 16px; margin-bottom: 5px;'>
+    <div style='display: flex; align-items: center; margin-bottom: 4px;'>
         <span class='pulse-dot'></span>
-        <span style='font-size: 22px; font-weight: 700; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; letter-spacing: -0.5px;'>REDROB <span style='color: #f59e0b;'>RANK</span></span>
+        <span style='font-size: 26px; font-weight: 700; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; letter-spacing: -0.5px;'>REDROB <span style='color: #f59e0b;'>RANK</span></span>
     </div>
-    <div style='font-size: 12px; color: #71717A; font-family: "Plus Jakarta Sans", sans-serif;'>AI Candidate Discovery Core</div>
+    <div style='font-size: 13.5px; color: #71717A; font-family: "Plus Jakarta Sans", sans-serif;'>AI Candidate Discovery Core</div>
 </div>
 """, unsafe_allow_html=True)
 
