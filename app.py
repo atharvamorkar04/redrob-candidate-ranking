@@ -70,7 +70,39 @@ st.markdown("""
     }
     section[data-testid="stSidebar"] > div {
         min-width: 280px !important;
-        padding-top: 3.5rem !important;
+        padding-top: 2rem !important;
+    }
+
+    /* Responsive — mobile */
+    @media (max-width: 768px) {
+        .block-container {
+            padding-top: 1rem !important;
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+        }
+        section[data-testid="stSidebar"] {
+            min-width: unset !important;
+            max-width: unset !important;
+            width: unset !important;
+        }
+    }
+
+    /* Desktop — sidebar offset for footer */
+    @media (min-width: 769px) {
+        .footer-bar {
+            left: 280px !important;
+        }
+    }
+
+    /* Tabs cut off on mobile */
+    div[data-testid="stHorizontalBlock"] {
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+    }
+    [data-testid="stTabs"] [role="tablist"] {
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+        scrollbar-width: none !important;
     }
 
     /* Sidebar styling */
@@ -79,10 +111,7 @@ st.markdown("""
         border-right: 1px solid #1E1014;
     }
     [data-testid="stSidebarUserContent"] {
-        padding-top: 0px !important;
-        padding-bottom: 20px !important;
-        padding-left: 14px !important;
-        padding-right: 14px !important;
+        padding: 20px 14px !important;
     }
     [data-testid="stSidebar"] [data-testid="element-container"] {
         margin-bottom: 8px !important;
@@ -377,7 +406,7 @@ st.markdown("""
                 Advanced Neural & Behavioral Candidate Intelligence Dashboard
             </p>
         </div>
-        <div style='display: flex; align-items: center; gap: 10px;'>
+        <div style='display: flex; flex-wrap: wrap; gap: 8px;'>
             <div style='background-color: rgba(225, 29, 72, 0.08); border: 1px solid rgba(225, 29, 72, 0.25); padding: 8px 16px; border-radius: 8px; text-align: center;'>
                 <div style='font-size: 10px; text-transform: uppercase; color: #FDA4AF; font-weight: 700; letter-spacing: 0.5px;'>Processing Core</div>
                 <div style='font-size: 14px; color: #FFFFFF; font-weight: 600; font-family: "Space Grotesk", sans-serif;'>CPU / O(K) Heap</div>
@@ -838,23 +867,23 @@ else:
             st.success('No honeypots detected in this candidate pool.')
 
 st.markdown("""
-<div style='position:fixed;bottom:0;left:280px;right:0;
+<div class='footer-bar' style='position:fixed;bottom:0;left:0;right:0;
             background:#0a0a0a;
             border-top:1px solid #1e293b;
-            padding:10px 24px;
+            padding:8px 16px;
             display:flex;
+            flex-wrap:wrap;
             justify-content:space-between;
             align-items:center;
+            gap:4px;
             z-index:999;'>
-    <div style='color:#334155;font-size:11px;letter-spacing:1px;'>
-        Built for
-        <span style='color:#ef4444;font-weight:600;'>
+    <div style='color:#334155;font-size:10px;letter-spacing:1px;'>
+        Built for <span style='color:#ef4444;font-weight:600;'>
         Redrob × Hack2Skill</span>
         <span style='color:#475569;'> — India RUNS Data & AI Challenge</span>
     </div>
-    <div style='color:#475569;font-size:11px;'>
-        Developed by
-        <span style='color:#f1f5f9;font-weight:600;'>Atharva Morkar</span>
+    <div style='color:#475569;font-size:10px;'>
+        Developed by <span style='color:#f1f5f9;font-weight:600;'>Atharva Morkar</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
