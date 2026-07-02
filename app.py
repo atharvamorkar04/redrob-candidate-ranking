@@ -68,14 +68,24 @@ st.markdown("""
         padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
     }
-    [data-testid="stSidebar"], [data-testid="stSidebarContainer"], div.stSidebar {
+    /* Only apply 380px width when the sidebar is expanded (data-collapsed="false") */
+    [data-testid="stSidebarContainer"][data-collapsed="false"],
+    [data-testid="stSidebarContainer"][data-collapsed="false"] [data-testid="stSidebar"],
+    [data-testid="stSidebarContainer"][data-collapsed="false"] div.stSidebar {
         min-width: 380px !important;
         max-width: 380px !important;
         width: 380px !important;
     }
-    [data-testid="stSidebar"] > div {
+    [data-testid="stSidebarContainer"][data-collapsed="false"] [data-testid="stSidebar"] > div {
         min-width: 380px !important;
         padding-top: 2rem !important;
+    }
+
+    /* Collapse the container completely when the sidebar is closed (data-collapsed="true") */
+    [data-testid="stSidebarContainer"][data-collapsed="true"] {
+        min-width: 0px !important;
+        max-width: 0px !important;
+        width: 0px !important;
     }
     [data-testid="stSidebar"] > div:first-child {
         padding-top: 3.5rem !important;
