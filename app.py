@@ -52,15 +52,20 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-    /* Hide all top-right header buttons (Share, Star, Edit, GitHub) but keep collapse toggle */
+    /* Hide all top-right header buttons (Share, Star, Edit, GitHub, Fork) but keep collapse toggle */
     header[data-testid="stHeader"] > div > div:nth-child(2),
     header[data-testid="stHeader"] > div:first-child > div:nth-child(2),
     header[data-testid="stHeader"] [data-testid="stHeaderDecoration"],
     header[data-testid="stHeader"] .stAppDeployButton,
     header[data-testid="stHeader"] [data-testid="stAppDeployButton"],
     header[data-testid="stHeader"] button[kind="headerDecoration"],
-    header[data-testid="stHeader"] a {
+    header[data-testid="stHeader"] a,
+    header[data-testid="stHeader"] div[class*="Fork"],
+    header[data-testid="stHeader"] div[class*="fork"],
+    header[data-testid="stHeader"] div[class*="viewerToolbar"],
+    div[class*="viewerToolbar"] {
         display: none !important;
+        visibility: hidden !important;
     }
 
     /* Main layout background and fonts */
@@ -111,10 +116,16 @@ st.markdown("""
         }
     }
 
-    /* Desktop — sidebar offset for footer */
+    /* Desktop — sidebar offset and right-shift padding for footer to avoid Streamlit watermark */
     @media (min-width: 769px) {
         .footer-bar {
             left: 380px !important;
+            padding-right: 150px !important;
+        }
+    }
+    @media (max-width: 768px) {
+        .footer-bar {
+            padding-right: 90px !important;
         }
     }
 

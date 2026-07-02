@@ -23,12 +23,14 @@ compute:
 
 ai_tools_used:
   - "GitHub Copilot"
-  - "Antigravity IDE"
+  - "Claude AI"
 
 ai_usage_summary: |
-  Used Antigravity IDE for autocomplete. All scoring logic, weights, and engineering
-  decisions are original work. No candidate data sent to any external API.
-  Ranker runs fully offline with no network dependency.
+  Used GitHub Copilot for code autocomplete, boilerplate generation, and writing git commit messages.
+  Used Claude AI for general code refactoring advice, unit test scaffolding review, and CSS layout polish.
+  All core scoring weights, heuristics, memory management architectures, and data validation rules are
+  original work. No candidate data or profile fields were sent to any external API; all processing runs
+  entirely offline.
 
 methodology_summary: |
   Five-component hybrid scoring system designed around signals the JD explicitly names.
