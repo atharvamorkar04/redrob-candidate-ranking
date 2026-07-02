@@ -25,16 +25,16 @@ def render_radar_chart(score_breakdown, candidate_id):
     fig = go.Figure(go.Scatterpolar(
         r=values_c, theta=cats_c, fill='toself',
         fillcolor='rgba(225,29,72,0.15)',
-        line=dict(color='#E11D48',width=2),
+        line=dict(color='#0ea5e9',width=2),
         name=candidate_id
     ))
     fig.update_layout(
-        polar=dict(bgcolor='#0A0A0C',
+        polar=dict(bgcolor='#030712',
             radialaxis=dict(visible=True,range=[0,1],tickfont=dict(color='#71717A'),
-                gridcolor='#1E1E24',linecolor='#1E1E24'),
+                gridcolor='#0f172a',linecolor='#0f172a'),
             angularaxis=dict(tickfont=dict(color='#E4E4E7',size=11),
-                gridcolor='#1E1E24',linecolor='#1E1E24')),
-        paper_bgcolor='#0A0A0C',plot_bgcolor='#0A0A0C',
+                gridcolor='#0f172a',linecolor='#0f172a')),
+        paper_bgcolor='#030712',plot_bgcolor='#030712',
         font=dict(color='#E4E4E7'),showlegend=False,
         margin=dict(l=40,r=40,t=20,b=20),height=240)
     return fig
@@ -54,7 +54,7 @@ st.markdown("""
 
     /* Main layout background and fonts */
     .stApp {
-        background-color: #050507;
+        background-color: #030712;
         color: #E4E4E7;
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
@@ -107,8 +107,8 @@ st.markdown("""
 
     /* Sidebar styling */
     [data-testid="stSidebar"] {
-        background-color: #020203;
-        border-right: 1px solid #1E1014;
+        background-color: #030712;
+        border-right: 1px solid #0f172a;
     }
     [data-testid="stSidebarUserContent"] {
         padding: 20px 14px !important;
@@ -128,18 +128,18 @@ st.markdown("""
         display: none !important;
     }
     [data-testid="collapsedControl"] {
-        color: #E11D48 !important;
-        background-color: #0C0C0E !important;
+        color: #0ea5e9 !important;
+        background-color: #030712 !important;
         border-radius: 8px !important;
-        border: 1px solid #1E1E24 !important;
+        border: 1px solid #0f172a !important;
         transition: all 0.3s ease !important;
     }
     [data-testid="collapsedControl"] button {
-        color: #E11D48 !important;
+        color: #0ea5e9 !important;
     }
     [data-testid="collapsedControl"]:hover {
-        border-color: #E11D48 !important;
-        box-shadow: 0 0 10px rgba(225, 29, 72, 0.4) !important;
+        border-color: #0ea5e9 !important;
+        box-shadow: 0 0 10px rgba(14, 165, 233, 0.4) !important;
     }
 
     /* Style the tabs to have a dark theme with red accents */
@@ -154,36 +154,36 @@ st.markdown("""
         padding: 12px 24px !important;
     }
     button[data-baseweb="tab"]:hover {
-        color: #F43F5E !important;
+        color: #38bdf8 !important;
     }
     button[data-baseweb="tab"][aria-selected="true"] {
-        color: #E11D48 !important;
-        border-bottom: 2px solid #E11D48 !important;
+        color: #0ea5e9 !important;
+        border-bottom: 2px solid #0ea5e9 !important;
     }
 
     /* Streamlit primary button styling */
     div.stButton > button[kind="primary"] {
-        background: linear-gradient(135deg, #E11D48 0%, #9F1239 100%) !important;
+        background: linear-gradient(135deg, #0ea5e9, #0284c7) !important;
         color: #FFFFFF !important;
         border: none !important;
         border-radius: 8px !important;
         padding: 10px 20px !important;
         font-weight: 600 !important;
         font-family: 'Space Grotesk', sans-serif !important;
-        box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3) !important;
+        box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3) !important;
         transition: all 0.3s ease !important;
     }
     div.stButton > button[kind="primary"]:hover {
-        background: linear-gradient(135deg, #F43F5E 0%, #BE123C 100%) !important;
-        box-shadow: 0 6px 20px rgba(225, 29, 72, 0.5) !important;
+        background: linear-gradient(135deg, #38bdf8, #0ea5e9) !important;
+        box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5) !important;
         transform: translateY(-1px) !important;
     }
 
     /* Streamlit download button styling */
     div.stDownloadButton > button {
-        background-color: #0A0A0C !important;
+        background-color: #030712 !important;
         color: #E4E4E7 !important;
-        border: 1px solid #E11D48 !important;
+        border: 1px solid #0ea5e9 !important;
         border-radius: 8px !important;
         font-weight: 600 !important;
         font-family: 'Space Grotesk', sans-serif !important;
@@ -191,27 +191,27 @@ st.markdown("""
         padding: 10px 20px !important;
     }
     div.stDownloadButton > button:hover {
-        background-color: #E11D48 !important;
+        background-color: #0ea5e9 !important;
         color: #FFFFFF !important;
-        box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3) !important;
+        box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3) !important;
     }
 
     /* Custom File Uploader */
     div[data-testid="stFileUploader"] {
-        border: 1px dashed rgba(225, 29, 72, 0.3) !important;
-        background-color: #0A0A0C !important;
+        border: 1px dashed rgba(14, 165, 233, 0.3) !important;
+        background-color: #030712 !important;
         border-radius: 8px !important;
         padding: 10px !important;
         transition: all 0.3s ease !important;
     }
     div[data-testid="stFileUploader"]:hover {
-        border-color: #E11D48 !important;
-        background-color: #121215 !important;
+        border-color: #0ea5e9 !important;
+        background-color: #0a0f1e !important;
     }
 
     /* Metrics Styling */
     div[data-testid="stMetricValue"] {
-        color: #E11D48 !important;
+        color: #0ea5e9 !important;
         font-family: 'Space Grotesk', sans-serif !important;
         font-weight: 700 !important;
     }
@@ -222,32 +222,32 @@ st.markdown("""
 
     /* Custom Card styling with red hover border and subtle shadow */
     .candidate-card {
-        background-color: #0C0C0E;
+        background-color: #030712;
         border-radius: 12px;
         padding: 20px;
         margin-bottom: 16px;
-        border: 1px solid #1E1E24;
-        border-left: 5px solid #E11D48;
+        border: 1px solid #0f172a;
+        border-left: 5px solid #0ea5e9;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         transition: all 0.3s ease;
     }
     .candidate-card:hover {
-        border-color: #E11D48;
-        box-shadow: 0 10px 30px rgba(225, 29, 72, 0.15);
+        border-color: #0ea5e9;
+        box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
         transform: translateY(-2px);
     }
 
     /* Custom Info & Warn styling override */
     div.stAlert {
-        background-color: #0A0A0C !important;
-        border: 1px solid #1E1E24 !important;
+        background-color: #030712 !important;
+        border: 1px solid #0f172a !important;
         color: #E4E4E7 !important;
         border-radius: 8px !important;
     }
 
     /* Progress bar customization */
     div[data-testid="stProgress"] > div > div > div > div {
-        background-color: #E11D48 !important;
+        background-color: #0ea5e9 !important;
     }
 
     /* Badge styling */
@@ -265,9 +265,9 @@ st.markdown("""
     }
 
     .badge-otw {
-        background-color: rgba(225, 29, 72, 0.08);
-        color: #FDA4AF;
-        border: 1px solid rgba(225, 29, 72, 0.25);
+        background-color: rgba(14, 165, 233, 0.08);
+        color: #bae6fd;
+        border: 1px solid rgba(14, 165, 233, 0.25);
     }
 
     .badge-verified {
@@ -277,15 +277,15 @@ st.markdown("""
     }
 
     .badge-urgent {
-        background-color: rgba(225, 29, 72, 0.25);
-        color: #FF859B;
-        border: 1px solid rgba(225, 29, 72, 0.5);
+        background-color: rgba(14, 165, 233, 0.25);
+        color: #bae6fd;
+        border: 1px solid rgba(14, 165, 233, 0.5);
     }
 
     .pulse-dot {
         width: 8px;
         height: 8px;
-        background-color: #E11D48;
+        background-color: #0ea5e9;
         border-radius: 50%;
         display: inline-block;
         box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
@@ -316,7 +316,7 @@ st.sidebar.markdown("""
 <div style='padding: 8px 16px 8px 16px; margin-bottom: 0px;'>
     <div style='display: flex; align-items: center; margin-bottom: 2px;'>
         <span class='pulse-dot'></span>
-        <span style='font-size: 22px; font-weight: 700; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; letter-spacing: -0.5px;'>REDROB <span style='color: #E11D48;'>RANK</span></span>
+        <span style='font-size: 22px; font-weight: 700; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; letter-spacing: -0.5px;'>REDROB <span style='color: #0ea5e9;'>RANK</span></span>
     </div>
     <div style='font-size: 12px; color: #71717A; font-family: "Plus Jakarta Sans", sans-serif;'>AI Candidate Discovery Core</div>
 </div>
@@ -396,23 +396,23 @@ if metrics:
 
 # 4. MAIN AREA - HERO BANNER
 st.markdown("""
-<div style='background: linear-gradient(90deg, #E11D48 0%, #0A0A0C 100%); padding: 1px; border-radius: 12px; margin-bottom: 30px;'>
-    <div style='background-color: #0A0A0C; padding: 25px 30px; border-radius: 11px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;'>
+<div style='background: linear-gradient(90deg, #0ea5e9 0%, #030712 100%); padding: 1px; border-radius: 12px; margin-bottom: 30px;'>
+    <div style='background-color: #030712; padding: 25px 30px; border-radius: 11px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;'>
         <div>
             <h1 style='margin: 0; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.5px;'>
-                REDROB <span style='color: #E11D48;'>RANKER</span>
+                REDROB <span style='color: #0ea5e9;'>RANKER</span>
             </h1>
             <p style='margin: 5px 0 0 0; color: #A1A1AA; font-size: 14px; font-family: "Plus Jakarta Sans", sans-serif;'>
                 Advanced Neural & Behavioral Candidate Intelligence Dashboard
             </p>
         </div>
         <div style='display: flex; flex-wrap: wrap; gap: 8px;'>
-            <div style='background-color: rgba(225, 29, 72, 0.08); border: 1px solid rgba(225, 29, 72, 0.25); padding: 8px 16px; border-radius: 8px; text-align: center;'>
-                <div style='font-size: 10px; text-transform: uppercase; color: #FDA4AF; font-weight: 700; letter-spacing: 0.5px;'>Processing Core</div>
+            <div style='background-color: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.25); padding: 8px 16px; border-radius: 8px; text-align: center;'>
+                <div style='font-size: 10px; text-transform: uppercase; color: #bae6fd; font-weight: 700; letter-spacing: 0.5px;'>Processing Core</div>
                 <div style='font-size: 14px; color: #FFFFFF; font-weight: 600; font-family: "Space Grotesk", sans-serif;'>CPU / O(K) Heap</div>
             </div>
-            <div style='background-color: rgba(225, 29, 72, 0.08); border: 1px solid rgba(225, 29, 72, 0.25); padding: 8px 16px; border-radius: 8px; text-align: center;'>
-                <div style='font-size: 10px; text-transform: uppercase; color: #FDA4AF; font-weight: 700; letter-spacing: 0.5px;'>Model Precision</div>
+            <div style='background-color: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.25); padding: 8px 16px; border-radius: 8px; text-align: center;'>
+                <div style='font-size: 10px; text-transform: uppercase; color: #bae6fd; font-weight: 700; letter-spacing: 0.5px;'>Model Precision</div>
                 <div style='font-size: 14px; color: #FFFFFF; font-weight: 600; font-family: "Space Grotesk", sans-serif;'>4 Decimals</div>
             </div>
         </div>
@@ -433,8 +433,8 @@ if not results:
         
         # Display scoring summary as card
         st.markdown("""
-        <div style='background-color: #121215; border-radius: 12px; padding: 25px; border-left: 5px solid #E11D48; border: 1px solid #1E1E24; box-shadow: 0 4px 20px rgba(225, 29, 72, 0.15);'>
-            <h3 style='color: #E11D48; margin-top: 0; font-family: "Space Grotesk", sans-serif; font-weight: 700;'>Redrob Ranker Intelligence Layer</h3>
+        <div style='background-color: #0a0f1e; border-radius: 12px; padding: 25px; border-left: 5px solid #0ea5e9; border: 1px solid #0f172a; box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15);'>
+            <h3 style='color: #0ea5e9; margin-top: 0; font-family: "Space Grotesk", sans-serif; font-weight: 700;'>Redrob Ranker Intelligence Layer</h3>
             <ul style='line-height: 1.6; color: #E4E4E7; font-family: "Plus Jakarta Sans", sans-serif;'>
                 <li><strong>5-Component Hybrid Scorer:</strong> Evaluates every candidate across skill match, career quality, role fit, engagement signals, and education — weighted precisely for this role.</li>
                 <li><strong>Semantic Career Reading:</strong> Reads full career history descriptions — not just skill tags — to find candidates who built recommendation systems, retrieval engines, or vector search pipelines even without exact JD keywords.</li>
@@ -515,11 +515,11 @@ else:
             
             # Select border color depending on rank tier
             if rank <= 10:
-                tier_color = "#E11D48"  # bright crimson red
+                tier_color = "#0ea5e9"  # bright crimson red
             elif rank <= 30:
-                tier_color = "#BE123C"  # medium rose red
+                tier_color = "#0284c7"  # medium rose red
             elif rank <= 60:
-                tier_color = "#9F1239"  # deep burgundy
+                tier_color = "#075985"  # deep burgundy
             else:
                 tier_color = "#52525B"  # dark steel grey
                 
@@ -595,7 +595,7 @@ else:
                 fig.add_trace(go.Histogram(
                     x=[r['score'] for r in results],
                     name='Top 100 Shortlist',
-                    marker_color='#E11D48',
+                    marker_color='#0ea5e9',
                     opacity=0.8,
                     nbinsx=10
                 ))
@@ -619,7 +619,7 @@ else:
             fig = px.histogram(
                 x=yoes,
                 nbins=10,
-                color_discrete_sequence=['#BE123C']
+                color_discrete_sequence=['#0284c7']
             )
             fig.update_layout(
                 paper_bgcolor='rgba(0,0,0,0)',
@@ -647,9 +647,9 @@ else:
             edu_c = [r['score_breakdown'].get('education_score', 0) * 0.10 for r in top_10]
             
             fig = go.Figure()
-            fig.add_trace(go.Bar(x=cids, y=skills_c, name='Skill Match (30%)', marker_color='#E11D48'))
-            fig.add_trace(go.Bar(x=cids, y=career_c, name='Career Quality (25%)', marker_color='#BE123C'))
-            fig.add_trace(go.Bar(x=cids, y=role_c, name='Role Fit (20%)', marker_color='#9F1239'))
+            fig.add_trace(go.Bar(x=cids, y=skills_c, name='Skill Match (30%)', marker_color='#0ea5e9'))
+            fig.add_trace(go.Bar(x=cids, y=career_c, name='Career Quality (25%)', marker_color='#0284c7'))
+            fig.add_trace(go.Bar(x=cids, y=role_c, name='Role Fit (20%)', marker_color='#075985'))
             fig.add_trace(go.Bar(x=cids, y=engagement_c, name='Engagement (15%)', marker_color='#5C0620'))
             fig.add_trace(go.Bar(x=cids, y=edu_c, name='Education (10%)', marker_color='#3F3F46'))
             
@@ -679,7 +679,7 @@ else:
                 x=[s[1] for s in sorted_skills],
                 y=[s[0] for s in sorted_skills],
                 orientation='h',
-                color_discrete_sequence=['#E11D48']
+                color_discrete_sequence=['#0ea5e9']
             )
             fig.update_layout(
                 paper_bgcolor='rgba(0,0,0,0)',
@@ -774,9 +774,9 @@ else:
                     title={'text': "Score compared to Top-10 Avg"},
                     gauge={
                         'axis': {'range': [0, 1]},
-                        'bar': {'color': "#E11D48"},
+                        'bar': {'color': "#0ea5e9"},
                         'steps': [
-                            {'range': [0, top_10_avg], 'color': "rgba(225, 29, 72, 0.1)"}
+                            {'range': [0, top_10_avg], 'color': "rgba(14, 165, 233, 0.1)"}
                         ],
                     }
                 ))
@@ -870,20 +870,22 @@ st.markdown("""
 <div class='footer-bar' style='position:fixed;bottom:0;left:0;right:0;
             background:#0a0a0a;
             border-top:1px solid #1e293b;
-            padding:8px 16px;
+            padding:10px 24px;
             display:flex;
             flex-wrap:wrap;
             justify-content:space-between;
             align-items:center;
             gap:4px;
             z-index:999;'>
-    <div style='color:#334155;font-size:10px;letter-spacing:1px;'>
-        Built for <span style='color:#ef4444;font-weight:600;'>
+    <div style='color:#334155;font-size:11px;letter-spacing:1px;'>
+        Built for
+        <span style='color:#0ea5e9;font-weight:600;'>
         Redrob × Hack2Skill</span>
         <span style='color:#475569;'> — India RUNS Data & AI Challenge</span>
     </div>
-    <div style='color:#475569;font-size:10px;'>
-        Developed by <span style='color:#f1f5f9;font-weight:600;'>Atharva Morkar</span>
+    <div style='color:#475569;font-size:11px;'>
+        Developed by
+        <span style='color:#f1f5f9;font-weight:600;'>Atharva Morkar</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
