@@ -520,7 +520,7 @@ else:
         csv_data = csv_buffer.getvalue()
         
         st.download_button(
-            label="Generate & Download atharvamorkar04_3026.csv",
+            label="⬇ Generate & Download",
             data=csv_data,
             file_name="atharvamorkar04_3026.csv",
             mime="text/csv",
