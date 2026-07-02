@@ -54,14 +54,14 @@ pip install -r requirements.txt
 ### 2. Generate the Shortlist CSV
 To execute the offline ranker pipeline:
 ```bash
-python rank.py --candidates candidates.jsonl --participant-id participant_redrob
+python rank.py --candidates candidates.jsonl --participant-id atharvamorkar04_3026
 ```
-*Note: This generates `participant_redrob.csv` containing the validated top-100 candidates.*
+*Note: This generates `atharvamorkar04_3026.csv` containing the validated top-100 candidates.*
 
 ### 3. Validate Submission
 To run the automated challenge validator against your generated CSV:
 ```bash
-python validate_submission.py participant_redrob.csv
+python validate_submission.py atharvamorkar04_3026.csv
 ```
 
 ### 4. Run Unit Test Suite
@@ -74,7 +74,7 @@ pytest
 
 ## 🖥️ Interactive Dashboard UI
 
-The system features a stunning **Crimson Red & Charcoal Black Space-Grotesk styled UI** built with Streamlit.
+The system features a stunning **Pure Black, Gold & White OpenAI/Anthropic style UI** built with Streamlit.
 
 To launch the dashboard locally:
 ```bash
