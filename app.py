@@ -72,6 +72,9 @@ st.markdown("""
         min-width: 280px !important;
         padding-top: 2rem !important;
     }
+    section[data-testid="stSidebar"] > div:first-child {
+        padding-top: 3.5rem !important;
+    }
 
     /* Responsive — mobile */
     @media (max-width: 768px) {
@@ -127,19 +130,14 @@ st.markdown("""
     div[data-testid="stHeaderDecoration"] {
         display: none !important;
     }
-    [data-testid="collapsedControl"] {
-        color: #0ea5e9 !important;
-        background-color: #030712 !important;
-        border-radius: 8px !important;
-        border: 1px solid #0f172a !important;
-        transition: all 0.3s ease !important;
+    button[data-testid="collapsedControl"] {
+        display: none !important;
     }
-    [data-testid="collapsedControl"] button {
-        color: #0ea5e9 !important;
+    div[data-testid="stSidebarCollapsedControl"] {
+        display: none !important;
     }
-    [data-testid="collapsedControl"]:hover {
-        border-color: #0ea5e9 !important;
-        box-shadow: 0 0 10px rgba(14, 165, 233, 0.4) !important;
+    button[kind="headerNoPadding"] {
+        display: none !important;
     }
 
     /* Style the tabs to have a dark theme with red accents */
