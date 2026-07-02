@@ -52,8 +52,9 @@ st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-    /* Hide top-right header toolbar */
-    header[data-testid="stHeader"] {
+    /* Hide top-right deploy/share/menu but keep collapse toggle */
+    .stAppDeployButton,
+    [data-testid="stAppDeployButton"] {
         display: none !important;
     }
 
