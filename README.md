@@ -76,6 +76,8 @@ pytest
 
 The system features a stunning **Pure Black, Gold & White style UI** built with Streamlit.
 
+🚀 **Live Sandbox Demo:** Access the hosted dashboard directly at [redrob-candidate-ranking-04.streamlit.app](https://redrob-candidate-ranking-04.streamlit.app) to interactively explore, sort, and query the candidate ranking results in real-time.
+
 To launch the dashboard locally:
 ```bash
 streamlit run app.py

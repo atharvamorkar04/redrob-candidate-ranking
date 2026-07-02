@@ -7,7 +7,7 @@ contact:
   phone: "+91-7821988638"
 
 github_repo: "https://github.com/atharvamorkar04/redrob-candidate-ranking"
-sandbox_link: "https://huggingface.co/spaces/atharvamorkar04/redrob-ranker"
+sandbox_link: "https://redrob-candidate-ranking-04.streamlit.app"
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --participant-id atharvamorkar04_3026"
 
 compute:
