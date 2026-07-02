@@ -63,16 +63,16 @@ st.markdown("""
         padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
     }
-    section[data-testid="stSidebar"] {
-        min-width: 340px !important;
-        max-width: 340px !important;
-        width: 340px !important;
+    [data-testid="stSidebar"], [data-testid="stSidebarContainer"], div.stSidebar {
+        min-width: 380px !important;
+        max-width: 380px !important;
+        width: 380px !important;
     }
-    section[data-testid="stSidebar"] > div {
-        min-width: 340px !important;
+    [data-testid="stSidebar"] > div {
+        min-width: 380px !important;
         padding-top: 2rem !important;
     }
-    section[data-testid="stSidebar"] > div:first-child {
+    [data-testid="stSidebar"] > div:first-child {
         padding-top: 3.5rem !important;
     }
 
@@ -83,7 +83,7 @@ st.markdown("""
             padding-left: 0.5rem !important;
             padding-right: 0.5rem !important;
         }
-        section[data-testid="stSidebar"] {
+        [data-testid="stSidebar"], [data-testid="stSidebarContainer"], div.stSidebar {
             min-width: unset !important;
             max-width: unset !important;
             width: unset !important;
@@ -93,7 +93,7 @@ st.markdown("""
     /* Desktop — sidebar offset for footer */
     @media (min-width: 769px) {
         .footer-bar {
-            left: 340px !important;
+            left: 380px !important;
         }
     }
 
@@ -114,7 +114,7 @@ st.markdown("""
         border-right: 1px solid #2a2a2a;
     }
     [data-testid="stSidebarUserContent"] {
-        padding: 20px 14px !important;
+        padding: 20px 24px !important;
     }
     [data-testid="stSidebar"] [data-testid="element-container"] {
         margin-bottom: 8px !important;
