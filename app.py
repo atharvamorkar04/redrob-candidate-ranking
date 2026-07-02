@@ -25,16 +25,16 @@ def render_radar_chart(score_breakdown, candidate_id):
     fig = go.Figure(go.Scatterpolar(
         r=values_c, theta=cats_c, fill='toself',
         fillcolor='rgba(225,29,72,0.15)',
-        line=dict(color='#0ea5e9',width=2),
+        line=dict(color='#f59e0b',width=2),
         name=candidate_id
     ))
     fig.update_layout(
-        polar=dict(bgcolor='#030712',
+        polar=dict(bgcolor='#000000',
             radialaxis=dict(visible=True,range=[0,1],tickfont=dict(color='#71717A'),
-                gridcolor='#0f172a',linecolor='#0f172a'),
+                gridcolor='#2a2a2a',linecolor='#2a2a2a'),
             angularaxis=dict(tickfont=dict(color='#E4E4E7',size=11),
-                gridcolor='#0f172a',linecolor='#0f172a')),
-        paper_bgcolor='#030712',plot_bgcolor='#030712',
+                gridcolor='#2a2a2a',linecolor='#2a2a2a')),
+        paper_bgcolor='#000000',plot_bgcolor='#000000',
         font=dict(color='#E4E4E7'),showlegend=False,
         margin=dict(l=40,r=40,t=20,b=20),height=240)
     return fig
@@ -54,7 +54,7 @@ st.markdown("""
 
     /* Main layout background and fonts */
     .stApp {
-        background-color: #030712;
+        background-color: #000000;
         color: #E4E4E7;
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
@@ -110,8 +110,8 @@ st.markdown("""
 
     /* Sidebar styling */
     [data-testid="stSidebar"] {
-        background-color: #030712;
-        border-right: 1px solid #0f172a;
+        background-color: #000000;
+        border-right: 1px solid #2a2a2a;
     }
     [data-testid="stSidebarUserContent"] {
         padding: 20px 14px !important;
@@ -140,6 +140,23 @@ st.markdown("""
         display: none !important;
     }
 
+    /* Gold theme global accents */
+    ::selection {
+        background: #f59e0b40;
+        color: #ffffff;
+    }
+    ::-webkit-scrollbar {
+        width: 4px;
+        background: #000000;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #f59e0b;
+        border-radius: 2px;
+    }
+    hr {
+        border-color: #2a2a2a !important;
+    }
+
     /* Style the tabs to have a dark theme with red accents */
     button[data-baseweb="tab"] {
         color: #71717A !important;
@@ -152,36 +169,36 @@ st.markdown("""
         padding: 12px 24px !important;
     }
     button[data-baseweb="tab"]:hover {
-        color: #38bdf8 !important;
+        color: #fbbf24 !important;
     }
     button[data-baseweb="tab"][aria-selected="true"] {
-        color: #0ea5e9 !important;
-        border-bottom: 2px solid #0ea5e9 !important;
+        color: #f59e0b !important;
+        border-bottom: 2px solid #f59e0b !important;
     }
 
     /* Streamlit primary button styling */
     div.stButton > button[kind="primary"] {
-        background: linear-gradient(135deg, #0ea5e9, #0284c7) !important;
+        background: linear-gradient(135deg, #f59e0b, #d97706) !important;
         color: #FFFFFF !important;
         border: none !important;
         border-radius: 8px !important;
         padding: 10px 20px !important;
         font-weight: 600 !important;
         font-family: 'Space Grotesk', sans-serif !important;
-        box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3) !important;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3) !important;
         transition: all 0.3s ease !important;
     }
     div.stButton > button[kind="primary"]:hover {
-        background: linear-gradient(135deg, #38bdf8, #0ea5e9) !important;
-        box-shadow: 0 6px 20px rgba(14, 165, 233, 0.5) !important;
+        background: linear-gradient(135deg, #fbbf24, #f59e0b) !important;
+        box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5) !important;
         transform: translateY(-1px) !important;
     }
 
     /* Streamlit download button styling */
     div.stDownloadButton > button {
-        background-color: #030712 !important;
+        background-color: #000000 !important;
         color: #E4E4E7 !important;
-        border: 1px solid #0ea5e9 !important;
+        border: 1px solid #f59e0b !important;
         border-radius: 8px !important;
         font-weight: 600 !important;
         font-family: 'Space Grotesk', sans-serif !important;
@@ -189,27 +206,27 @@ st.markdown("""
         padding: 10px 20px !important;
     }
     div.stDownloadButton > button:hover {
-        background-color: #0ea5e9 !important;
+        background-color: #f59e0b !important;
         color: #FFFFFF !important;
-        box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3) !important;
+        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3) !important;
     }
 
     /* Custom File Uploader */
     div[data-testid="stFileUploader"] {
-        border: 1px dashed rgba(14, 165, 233, 0.3) !important;
-        background-color: #030712 !important;
+        border: 1px dashed rgba(245, 158, 11, 0.3) !important;
+        background-color: #000000 !important;
         border-radius: 8px !important;
         padding: 10px !important;
         transition: all 0.3s ease !important;
     }
     div[data-testid="stFileUploader"]:hover {
-        border-color: #0ea5e9 !important;
-        background-color: #0a0f1e !important;
+        border-color: #f59e0b !important;
+        background-color: #0d0d0d !important;
     }
 
     /* Metrics Styling */
     div[data-testid="stMetricValue"] {
-        color: #0ea5e9 !important;
+        color: #f59e0b !important;
         font-family: 'Space Grotesk', sans-serif !important;
         font-weight: 700 !important;
     }
@@ -220,32 +237,32 @@ st.markdown("""
 
     /* Custom Card styling with red hover border and subtle shadow */
     .candidate-card {
-        background-color: #030712;
+        background-color: #000000;
         border-radius: 12px;
         padding: 20px;
         margin-bottom: 16px;
-        border: 1px solid #0f172a;
-        border-left: 5px solid #0ea5e9;
+        border: 1px solid #2a2a2a;
+        border-left: 5px solid #f59e0b;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         transition: all 0.3s ease;
     }
     .candidate-card:hover {
-        border-color: #0ea5e9;
-        box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
+        border-color: #f59e0b;
+        box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
         transform: translateY(-2px);
     }
 
     /* Custom Info & Warn styling override */
     div.stAlert {
-        background-color: #030712 !important;
-        border: 1px solid #0f172a !important;
+        background-color: #000000 !important;
+        border: 1px solid #2a2a2a !important;
         color: #E4E4E7 !important;
         border-radius: 8px !important;
     }
 
     /* Progress bar customization */
     div[data-testid="stProgress"] > div > div > div > div {
-        background-color: #0ea5e9 !important;
+        background-color: #f59e0b !important;
     }
 
     /* Badge styling */
@@ -263,9 +280,9 @@ st.markdown("""
     }
 
     .badge-otw {
-        background-color: rgba(14, 165, 233, 0.08);
+        background-color: rgba(245, 158, 11, 0.08);
         color: #bae6fd;
-        border: 1px solid rgba(14, 165, 233, 0.25);
+        border: 1px solid rgba(245, 158, 11, 0.25);
     }
 
     .badge-verified {
@@ -275,18 +292,18 @@ st.markdown("""
     }
 
     .badge-urgent {
-        background-color: rgba(14, 165, 233, 0.25);
+        background-color: rgba(245, 158, 11, 0.25);
         color: #bae6fd;
-        border: 1px solid rgba(14, 165, 233, 0.5);
+        border: 1px solid rgba(245, 158, 11, 0.5);
     }
 
     .pulse-dot {
         width: 8px;
         height: 8px;
-        background-color: #0ea5e9;
+        background-color: #f59e0b;
         border-radius: 50%;
         display: inline-block;
-        box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
         animation: pulse 1.5s infinite;
         margin-right: 8px;
         vertical-align: middle;
@@ -295,15 +312,15 @@ st.markdown("""
     @keyframes pulse {
         0% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7);
+            box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.7);
         }
         70% {
             transform: scale(1);
-            box-shadow: 0 0 0 6px rgba(225, 29, 72, 0);
+            box-shadow: 0 0 0 6px rgba(245, 158, 11, 0);
         }
         100% {
             transform: scale(0.95);
-            box-shadow: 0 0 0 0 rgba(225, 29, 72, 0);
+            box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
         }
     }
 </style>
@@ -314,7 +331,7 @@ st.sidebar.markdown("""
 <div style='padding: 8px 16px 8px 16px; margin-bottom: 0px;'>
     <div style='display: flex; align-items: center; margin-bottom: 2px;'>
         <span class='pulse-dot'></span>
-        <span style='font-size: 22px; font-weight: 700; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; letter-spacing: -0.5px;'>REDROB <span style='color: #0ea5e9;'>RANK</span></span>
+        <span style='font-size: 22px; font-weight: 700; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; letter-spacing: -0.5px;'>REDROB <span style='color: #f59e0b;'>RANK</span></span>
     </div>
     <div style='font-size: 12px; color: #71717A; font-family: "Plus Jakarta Sans", sans-serif;'>AI Candidate Discovery Core</div>
 </div>
@@ -394,25 +411,23 @@ if metrics:
 
 # 4. MAIN AREA - HERO BANNER
 st.markdown("""
-<div style='background: linear-gradient(90deg, #0ea5e9 0%, #030712 100%); padding: 1px; border-radius: 12px; margin-bottom: 30px;'>
-    <div style='background-color: #030712; padding: 25px 30px; border-radius: 11px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;'>
-        <div>
-            <h1 style='margin: 0; color: #FFFFFF; font-family: "Space Grotesk", sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.5px;'>
-                REDROB <span style='color: #0ea5e9;'>RANKER</span>
-            </h1>
-            <p style='margin: 5px 0 0 0; color: #A1A1AA; font-size: 14px; font-family: "Plus Jakarta Sans", sans-serif;'>
-                Advanced Neural & Behavioral Candidate Intelligence Dashboard
-            </p>
+<div style='background-color: #0d0d0d; border: 1px solid #2a2a2a; border-left: 3px solid #f59e0b; padding: 25px 30px; border-radius: 12px; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;'>
+    <div>
+        <h1 style='margin: 0; color: #ffffff; font-family: "Space Grotesk", sans-serif; font-size: 32px; font-weight: 700; letter-spacing: -0.5px;'>
+            REDROB <span style='color: #f59e0b;'>RANKER</span>
+        </h1>
+        <p style='margin: 5px 0 0 0; color: #6b7280; font-size: 14px; font-family: "Plus Jakarta Sans", sans-serif;'>
+            Advanced Neural & Behavioral Candidate Intelligence Dashboard
+        </p>
+    </div>
+    <div style='display: flex; flex-wrap: wrap; gap: 8px;'>
+        <div style='background-color: rgba(245, 158, 11, 0.08); border: 1px solid #f59e0b30; padding: 8px 16px; border-radius: 8px; text-align: center;'>
+            <div style='font-size: 10px; text-transform: uppercase; color: #f59e0b; font-weight: 700; letter-spacing: 0.5px;'>Processing Core</div>
+            <div style='font-size: 14px; color: #FFFFFF; font-weight: 600; font-family: "Space Grotesk", sans-serif;'>CPU / O(K) Heap</div>
         </div>
-        <div style='display: flex; flex-wrap: wrap; gap: 8px;'>
-            <div style='background-color: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.25); padding: 8px 16px; border-radius: 8px; text-align: center;'>
-                <div style='font-size: 10px; text-transform: uppercase; color: #bae6fd; font-weight: 700; letter-spacing: 0.5px;'>Processing Core</div>
-                <div style='font-size: 14px; color: #FFFFFF; font-weight: 600; font-family: "Space Grotesk", sans-serif;'>CPU / O(K) Heap</div>
-            </div>
-            <div style='background-color: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.25); padding: 8px 16px; border-radius: 8px; text-align: center;'>
-                <div style='font-size: 10px; text-transform: uppercase; color: #bae6fd; font-weight: 700; letter-spacing: 0.5px;'>Model Precision</div>
-                <div style='font-size: 14px; color: #FFFFFF; font-weight: 600; font-family: "Space Grotesk", sans-serif;'>4 Decimals</div>
-            </div>
+        <div style='background-color: rgba(245, 158, 11, 0.08); border: 1px solid #f59e0b30; padding: 8px 16px; border-radius: 8px; text-align: center;'>
+            <div style='font-size: 10px; text-transform: uppercase; color: #f59e0b; font-weight: 700; letter-spacing: 0.5px;'>Model Precision</div>
+            <div style='font-size: 14px; color: #FFFFFF; font-weight: 600; font-family: "Space Grotesk", sans-serif;'>4 Decimals</div>
         </div>
     </div>
 </div>
@@ -427,18 +442,25 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 if not results:
     with tab1:
-        st.info("No upload needed — just click Run Ranking to start instantly.\n\nThe system auto-detects the local dataset. Upload a file only to rank a different dataset.")
+        st.markdown("""
+        <div style='background-color: #0d0d0d; border: 1px solid #f59e0b20; border-left: 3px solid #f59e0b; padding: 16px 20px; border-radius: 8px; margin-bottom: 25px;'>
+            <div style='color: #d1d5db; font-size: 14px; font-family: "Plus Jakarta Sans", sans-serif; line-height: 1.5;'>
+                No upload needed — just click Run Ranking to start instantly.<br><br>
+                The system auto-detects the local dataset. Upload a file only to rank a different dataset.
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
         
         # Display scoring summary as card
         st.markdown("""
-        <div style='background-color: #0a0f1e; border-radius: 12px; padding: 25px; border-left: 5px solid #0ea5e9; border: 1px solid #0f172a; box-shadow: 0 4px 20px rgba(14, 165, 233, 0.15);'>
-            <h3 style='color: #0ea5e9; margin-top: 0; font-family: "Space Grotesk", sans-serif; font-weight: 700;'>Redrob Ranker Intelligence Layer</h3>
-            <ul style='line-height: 1.6; color: #E4E4E7; font-family: "Plus Jakarta Sans", sans-serif;'>
-                <li><strong>5-Component Hybrid Scorer:</strong> Evaluates every candidate across skill match, career quality, role fit, engagement signals, and education — weighted precisely for this role.</li>
-                <li><strong>Semantic Career Reading:</strong> Reads full career history descriptions — not just skill tags — to find candidates who built recommendation systems, retrieval engines, or vector search pipelines even without exact JD keywords.</li>
-                <li><strong>O(K) Heap Engine:</strong> Processes 100,000 candidates in under 60 seconds using a min-heap memory model — no GPU, no embeddings, no network calls required.</li>
-                <li><strong>Honeypot Shield:</strong> Detects falsified profiles using 5 behavioural heuristics — impossible skill timelines, perfect engagement scores, and expert-level claims with zero evidence.</li>
-                <li><strong>Availability Intelligence:</strong> Applies a dynamic multiplier based on open-to-work status, response rate, and activity recency — so only genuinely reachable candidates surface at the top.</li>
+        <div style='background-color: #0d0d0d; border-radius: 12px; padding: 25px; border-left: 5px solid #f59e0b; border: 1px solid #2a2a2a; box-shadow: 0 4px 20px #f59e0b40;'>
+            <h3 style='color: #f59e0b; margin-top: 0; font-family: "Space Grotesk", sans-serif; font-weight: 700;'>Redrob Ranker Intelligence Layer</h3>
+            <ul style='line-height: 1.6; color: #d1d5db; font-family: "Plus Jakarta Sans", sans-serif;'>
+                <li><strong style='color: #f59e0b;'>5-Component Hybrid Scorer:</strong> Evaluates every candidate across skill match, career quality, role fit, engagement signals, and education — weighted precisely for this role.</li>
+                <li><strong style='color: #f59e0b;'>Semantic Career Reading:</strong> Reads full career history descriptions — not just skill tags — to find candidates who built recommendation systems, retrieval engines, or vector search pipelines even without exact JD keywords.</li>
+                <li><strong style='color: #f59e0b;'>O(K) Heap Engine:</strong> Processes 100,000 candidates in under 60 seconds using a min-heap memory model — no GPU, no embeddings, no network calls required.</li>
+                <li><strong style='color: #f59e0b;'>Honeypot Shield:</strong> Detects falsified profiles using 5 behavioural heuristics — impossible skill timelines, perfect engagement scores, and expert-level claims with zero evidence.</li>
+                <li><strong style='color: #f59e0b;'>Availability Intelligence:</strong> Applies a dynamic multiplier based on open-to-work status, response rate, and activity recency — so only genuinely reachable candidates surface at the top.</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
@@ -513,11 +535,11 @@ else:
             
             # Select border color depending on rank tier
             if rank <= 10:
-                tier_color = "#0ea5e9"  # bright crimson red
+                tier_color = "#f59e0b"  # bright crimson red
             elif rank <= 30:
-                tier_color = "#0284c7"  # medium rose red
+                tier_color = "#d97706"  # medium rose red
             elif rank <= 60:
-                tier_color = "#075985"  # deep burgundy
+                tier_color = "#92400e"  # deep burgundy
             else:
                 tier_color = "#52525B"  # dark steel grey
                 
@@ -593,7 +615,7 @@ else:
                 fig.add_trace(go.Histogram(
                     x=[r['score'] for r in results],
                     name='Top 100 Shortlist',
-                    marker_color='#0ea5e9',
+                    marker_color='#f59e0b',
                     opacity=0.8,
                     nbinsx=10
                 ))
@@ -617,7 +639,7 @@ else:
             fig = px.histogram(
                 x=yoes,
                 nbins=10,
-                color_discrete_sequence=['#0284c7']
+                color_discrete_sequence=['#d97706']
             )
             fig.update_layout(
                 paper_bgcolor='rgba(0,0,0,0)',
@@ -645,10 +667,10 @@ else:
             edu_c = [r['score_breakdown'].get('education_score', 0) * 0.10 for r in top_10]
             
             fig = go.Figure()
-            fig.add_trace(go.Bar(x=cids, y=skills_c, name='Skill Match (30%)', marker_color='#0ea5e9'))
-            fig.add_trace(go.Bar(x=cids, y=career_c, name='Career Quality (25%)', marker_color='#0284c7'))
-            fig.add_trace(go.Bar(x=cids, y=role_c, name='Role Fit (20%)', marker_color='#075985'))
-            fig.add_trace(go.Bar(x=cids, y=engagement_c, name='Engagement (15%)', marker_color='#5C0620'))
+            fig.add_trace(go.Bar(x=cids, y=skills_c, name='Skill Match (30%)', marker_color='#f59e0b'))
+            fig.add_trace(go.Bar(x=cids, y=career_c, name='Career Quality (25%)', marker_color='#d97706'))
+            fig.add_trace(go.Bar(x=cids, y=role_c, name='Role Fit (20%)', marker_color='#92400e'))
+            fig.add_trace(go.Bar(x=cids, y=engagement_c, name='Engagement (15%)', marker_color='#92400e'))
             fig.add_trace(go.Bar(x=cids, y=edu_c, name='Education (10%)', marker_color='#3F3F46'))
             
             fig.update_layout(
@@ -677,7 +699,7 @@ else:
                 x=[s[1] for s in sorted_skills],
                 y=[s[0] for s in sorted_skills],
                 orientation='h',
-                color_discrete_sequence=['#0ea5e9']
+                color_discrete_sequence=['#f59e0b']
             )
             fig.update_layout(
                 paper_bgcolor='rgba(0,0,0,0)',
@@ -772,9 +794,9 @@ else:
                     title={'text': "Score compared to Top-10 Avg"},
                     gauge={
                         'axis': {'range': [0, 1]},
-                        'bar': {'color': "#0ea5e9"},
+                        'bar': {'color': "#f59e0b"},
                         'steps': [
-                            {'range': [0, top_10_avg], 'color': "rgba(14, 165, 233, 0.1)"}
+                            {'range': [0, top_10_avg], 'color': "rgba(245, 158, 11, 0.1)"}
                         ],
                     }
                 ))
@@ -866,8 +888,8 @@ else:
 
 st.markdown("""
 <div class='footer-bar' style='position:fixed;bottom:0;left:0;right:0;
-            background:#0a0a0a;
-            border-top:1px solid #1e293b;
+            background:#000000;
+            border-top:1px solid #2a2a2a;
             padding:10px 24px;
             display:flex;
             flex-wrap:wrap;
@@ -875,15 +897,15 @@ st.markdown("""
             align-items:center;
             gap:4px;
             z-index:999;'>
-    <div style='color:#334155;font-size:11px;letter-spacing:1px;'>
+    <div style='color:#6b7280;font-size:11px;letter-spacing:1px;'>
         Built for
-        <span style='color:#0ea5e9;font-weight:600;'>
+        <span style='color:#f59e0b;font-weight:600;'>
         Redrob × Hack2Skill</span>
-        <span style='color:#475569;'> — India RUNS Data & AI Challenge</span>
+        <span style='color:#6b7280;'> — India RUNS Data & AI Challenge</span>
     </div>
-    <div style='color:#475569;font-size:11px;'>
+    <div style='color:#6b7280;font-size:11px;'>
         Developed by
-        <span style='color:#f1f5f9;font-weight:600;'>Atharva Morkar</span>
+        <span style='color:#ffffff;font-weight:600;'>Atharva Morkar</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
