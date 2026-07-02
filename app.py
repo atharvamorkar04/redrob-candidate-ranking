@@ -64,12 +64,12 @@ st.markdown("""
         padding-right: 1.5rem !important;
     }
     section[data-testid="stSidebar"] {
-        min-width: 300px !important;
-        max-width: 300px !important;
-        width: 300px !important;
+        min-width: 340px !important;
+        max-width: 340px !important;
+        width: 340px !important;
     }
     section[data-testid="stSidebar"] > div {
-        min-width: 300px !important;
+        min-width: 340px !important;
         padding-top: 2rem !important;
     }
     section[data-testid="stSidebar"] > div:first-child {
@@ -93,7 +93,7 @@ st.markdown("""
     /* Desktop — sidebar offset for footer */
     @media (min-width: 769px) {
         .footer-bar {
-            left: 300px !important;
+            left: 340px !important;
         }
     }
 
@@ -114,7 +114,7 @@ st.markdown("""
         border-right: 1px solid #2a2a2a;
     }
     [data-testid="stSidebarUserContent"] {
-        padding: 20px 20px !important;
+        padding: 20px 14px !important;
     }
     [data-testid="stSidebar"] [data-testid="element-container"] {
         margin-bottom: 8px !important;
@@ -130,14 +130,19 @@ st.markdown("""
     div[data-testid="stHeaderDecoration"] {
         display: none !important;
     }
-    button[data-testid="collapsedControl"] {
-        display: none !important;
+    [data-testid="collapsedControl"] {
+        color: #f59e0b !important;
+        background-color: #000000 !important;
+        border-radius: 8px !important;
+        border: 1px solid #2a2a2a !important;
+        transition: all 0.3s ease !important;
     }
-    div[data-testid="stSidebarCollapsedControl"] {
-        display: none !important;
+    [data-testid="collapsedControl"] button {
+        color: #f59e0b !important;
     }
-    button[kind="headerNoPadding"] {
-        display: none !important;
+    [data-testid="collapsedControl"]:hover {
+        border-color: #f59e0b !important;
+        box-shadow: 0 0 10px rgba(245, 158, 11, 0.4) !important;
     }
 
     /* Gold theme global accents */
