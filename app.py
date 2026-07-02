@@ -64,12 +64,12 @@ st.markdown("""
         padding-right: 1.5rem !important;
     }
     section[data-testid="stSidebar"] {
-        min-width: 280px !important;
-        max-width: 280px !important;
-        width: 280px !important;
+        min-width: 300px !important;
+        max-width: 300px !important;
+        width: 300px !important;
     }
     section[data-testid="stSidebar"] > div {
-        min-width: 280px !important;
+        min-width: 300px !important;
         padding-top: 2rem !important;
     }
     section[data-testid="stSidebar"] > div:first-child {
@@ -93,7 +93,7 @@ st.markdown("""
     /* Desktop — sidebar offset for footer */
     @media (min-width: 769px) {
         .footer-bar {
-            left: 280px !important;
+            left: 300px !important;
         }
     }
 
@@ -114,7 +114,7 @@ st.markdown("""
         border-right: 1px solid #2a2a2a;
     }
     [data-testid="stSidebarUserContent"] {
-        padding: 20px 14px !important;
+        padding: 20px 20px !important;
     }
     [data-testid="stSidebar"] [data-testid="element-container"] {
         margin-bottom: 8px !important;
