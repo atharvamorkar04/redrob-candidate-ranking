@@ -59,12 +59,18 @@ st.markdown("""
         font-family: 'Plus Jakarta Sans', sans-serif;
     }
     .block-container {
-        padding-top: 1rem !important;
+        padding-top: 3.5rem !important;
         padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
     }
-    section[data-testid="stSidebar"] > div:first-child {
-        padding-top: 0rem !important;
+    section[data-testid="stSidebar"] {
+        min-width: 280px !important;
+        max-width: 280px !important;
+        width: 280px !important;
+    }
+    section[data-testid="stSidebar"] > div {
+        min-width: 280px !important;
+        padding-top: 2rem !important;
     }
 
     /* Sidebar styling */
@@ -830,17 +836,22 @@ else:
 
 st.markdown("""
 <div style='position:fixed;bottom:0;left:280px;right:0;
-            background:#030712;border-top:1px solid #1e293b;
-            padding:10px 24px;display:flex;
-            justify-content:space-between;align-items:center;
+            background:#0a0a0a;
+            border-top:1px solid #1e293b;
+            padding:10px 24px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
             z-index:999;'>
-    <div style='color:#334155;font-size:11px;letter-spacing:1px;align-items:center;'>
-        Built for <span style='color:#0ea5e9;font-weight:600;'>
-        Redrob × Hack2Skill</span> — India RUNS Data & AI Challenge
+    <div style='color:#334155;font-size:11px;letter-spacing:1px;'>
+        Built for
+        <span style='color:#ef4444;font-weight:600;'>
+        Redrob × Hack2Skill</span>
+        <span style='color:#475569;'> — India RUNS Data & AI Challenge</span>
     </div>
-    <div style='color:#334155;font-size:11px;'>
-        Developed by <span style='color:#f1f5f9;font-weight:600;'>
-        Atharva Morkar</span>
+    <div style='color:#475569;font-size:11px;'>
+        Developed by
+        <span style='color:#f1f5f9;font-weight:600;'>Atharva Morkar</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
