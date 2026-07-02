@@ -375,7 +375,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
 
 if not results:
     with tab1:
-        st.info("No upload needed — just click Run Ranking. The system auto-detects the local dataset and begins ranking instantly. Upload a file only if you want to rank a different dataset.")
+        st.info("No upload needed — just click Run Ranking to start instantly.\n\nThe system auto-detects the local dataset. Upload a file only to rank a different dataset.")
         
         # Display scoring summary as card
         st.markdown("""
