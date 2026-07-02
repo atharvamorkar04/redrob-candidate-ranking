@@ -394,12 +394,25 @@ else:
     except SystemExit:
         candidates_file_to_use = None
 
+    # Fall back to sample_candidates.jsonl if the full candidates file is missing (e.g. on Hugging Face Spaces)
+    if not candidates_file_to_use:
+        sample_path = "sample_candidates.jsonl"
+        if os.path.exists(sample_path):
+            candidates_file_to_use = sample_path
+
     if candidates_file_to_use and run_pressed:
-        with st.spinner("Running ranking on local workspace dataset..."):
+        is_sample = (candidates_file_to_use == "sample_candidates.jsonl")
+        spinner_msg = "Running ranking on sample dataset (100 candidates)..." if is_sample else "Running ranking on local workspace dataset..."
+        with st.spinner(spinner_msg):
             results, metrics = process_data(candidates_file_to_use)
             st.session_state['results'] = results
             st.session_state['metrics'] = metrics
-            st.sidebar.success("Local Ranking Completed!")
+            success_msg = "Sample Ranking Completed!" if is_sample else "Local Ranking Completed!"
+            st.sidebar.success(success_msg)
+            if is_sample:
+                st.sidebar.warning("Note: Running on sample candidate pool. Upload candidates.jsonl to run the full dataset.")
+    elif run_pressed and not candidates_file_to_use:
+        st.sidebar.error("No candidates file found. Please upload a candidates dataset to rank.")
 
 # Retrieve session results
 if 'results' in st.session_state:
