@@ -70,7 +70,7 @@ st.markdown("""
     }
     section[data-testid="stSidebar"] > div {
         min-width: 280px !important;
-        padding-top: 2rem !important;
+        padding-top: 3.5rem !important;
     }
 
     /* Sidebar styling */
